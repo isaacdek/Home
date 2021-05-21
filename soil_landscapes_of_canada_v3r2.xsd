@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fme="http://www.safe.com/gml/fme" xmlns:gmlsf="http://www.opengis.net/gmlsf" targetNamespace="http://www.safe.com/gml/fme" elementFormDefault="qualified" version="1.0.0">
+<annotation>
+<appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
+<gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+<gmlsf:GMLProfileSchema>http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd</gmlsf:GMLProfileSchema>
+</appinfo>
+</annotation>
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd"/>
+<import namespace="http://www.opengis.net/gmlsf" schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
+<element name="FeatureCollection" type="fme:FeatureCollectionType" substitutionGroup="gml:_GML"/>
+<complexType name="FeatureCollectionType"><complexContent><extension base="gml:AbstractFeatureType"><sequence minOccurs="0" maxOccurs="unbounded"><element name="featureMember"><complexType><sequence><element ref="gml:_Feature"/></sequence></complexType></element></sequence></extension></complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_lst" type="fme:ca_all_slc_v3r2_lstType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_lstType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="POLY_ID" minOccurs="0" type="integer"/>
+<element name="LF_TYPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_SLOPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_SEGMENT" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PERCENT" minOccurs="0" type="float"/>
+<element name="CROPPED" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROVINCE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_CODE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MODIFIER" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROFILE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="9"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LFS_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="11"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_slt" type="fme:ca_all_slc_v3r2_sltType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_sltType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="SOIL_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="11"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROVINCE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_CODE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MODIFIER" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROFILE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LAYER_NO" minOccurs="0" type="short"/>
+<element name="UDEPTH" minOccurs="0" type="short"/>
+<element name="LDEPTH" minOccurs="0" type="short"/>
+<element name="HZN_LIT" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="HZN_MAS" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="HZN_SUF" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="7"/>
+</restriction>
+</simpleType>
+</element>
+<element name="HZN_MOD" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="COFRAG" minOccurs="0" type="short"/>
+<element name="DOMSAND" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="VFSAND" minOccurs="0" type="short"/>
+<element name="TSAND" minOccurs="0" type="short"/>
+<element name="TSILT" minOccurs="0" type="short"/>
+<element name="TCLAY" minOccurs="0" type="short"/>
+<element name="ORGCARB" minOccurs="0" type="float"/>
+<element name="PHCA" minOccurs="0" type="float"/>
+<element name="PH2" minOccurs="0" type="float"/>
+<element name="BASES" minOccurs="0" type="short"/>
+<element name="CEC" minOccurs="0" type="short"/>
+<element name="KSAT" minOccurs="0" type="float"/>
+<element name="KP0" minOccurs="0" type="short"/>
+<element name="KP10" minOccurs="0" type="short"/>
+<element name="KP33" minOccurs="0" type="short"/>
+<element name="KP1500" minOccurs="0" type="short"/>
+<element name="BD" minOccurs="0" type="float"/>
+<element name="EC" minOccurs="0" type="short"/>
+<element name="CACO3" minOccurs="0" type="short"/>
+<element name="VONPOST" minOccurs="0" type="short"/>
+<element name="WOOD" minOccurs="0" type="short"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_ldt" type="fme:ca_all_slc_v3r2_ldtType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_ldtType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="LFS_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_TYPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_SLOPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_SEGMENT" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LFS_EXTENT" minOccurs="0" type="short"/>
+<element name="LFS_SLOPE" minOccurs="0" type="float"/>
+<element name="LFS_LENGTH" minOccurs="0" type="short"/>
+<element name="LFS_NAME" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="45"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_snt" type="fme:ca_all_slc_v3r2_sntType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_sntType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="SOIL_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="11"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROVINCE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_CODE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MODIFIER" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROFILE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOILNAME" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="24"/>
+</restriction>
+</simpleType>
+</element>
+<element name="KIND" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="WATERTBL" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="ROOTRESTRI" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="RESTR_TYPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="DRAINAGE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMTEX1" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMTEX2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMTEX3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMCHEM1" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMCHEM2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PMCHEM3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MDEP1" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="4"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MDEP2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="4"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MDEP3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="4"/>
+</restriction>
+</simpleType>
+</element>
+<element name="ORDER2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="G_GROUP2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="S_GROUP2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="4"/>
+</restriction>
+</simpleType>
+</element>
+<element name="ORDER3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="G_GROUP3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="S_GROUP3" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_eft" type="fme:ca_all_slc_v3r2_eftType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_eftType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="ECO_ID" minOccurs="0" type="short"/>
+<element name="ECODISTRIC" minOccurs="0" type="short"/>
+<element name="ECOREGION" minOccurs="0" type="short"/>
+<element name="ECOPROVINC" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="ECOZONE" minOccurs="0" type="short"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_cmp" type="fme:ca_all_slc_v3r2_cmpType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_cmpType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="POLY_ID" minOccurs="0" type="integer"/>
+<element name="CMP" minOccurs="0" type="short"/>
+<element name="PERCENT" minOccurs="0" type="short"/>
+<element name="SLOPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="STONE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LOCSF" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROVINCE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_CODE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="MODIFIER" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="PROFILE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="SOIL_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="11"/>
+</restriction>
+</simpleType>
+</element>
+<element name="CMP_ID" minOccurs="0" type="integer"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ped_aafc_ca_all_slc_v3r2" type="fme:ped_aafc_ca_all_slc_v3r2Type" substitutionGroup="gml:_Feature"/>
+<complexType name="ped_aafc_ca_all_slc_v3r2Type">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="AREA" minOccurs="0" type="double"/>
+<element name="PERIMETER" minOccurs="0" type="double"/>
+<element name="POLY_ID" minOccurs="0" type="integer"/>
+<element name="ECO_ID" minOccurs="0" type="short"/>
+<element name="Shape_Length" minOccurs="0" type="double"/>
+<element name="Shape_Area" minOccurs="0" type="double"/>
+<element name="surfaceProperty" type="gml:SurfacePropertyType" minOccurs="0"/>
+<element name="multiSurfaceProperty" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_crt" type="fme:ca_all_slc_v3r2_crtType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_crtType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="CMP_ID" minOccurs="0" type="integer"/>
+<element name="CFRAG1" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="CFRAG2" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="DEPTH" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="RESTR_TYPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="AWHC" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_lat" type="fme:ca_all_slc_v3r2_latType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_latType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="POLY_ID" minOccurs="0" type="integer"/>
+<element name="LAND_AREA" minOccurs="0" type="integer"/>
+<element name="WATER_AREA" minOccurs="0" type="integer"/>
+<element name="FRESH_AREA" minOccurs="0" type="integer"/>
+<element name="OCEAN_AREA" minOccurs="0" type="integer"/>
+<element name="TOTAL_AREA" minOccurs="0" type="integer"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+<element name="ca_all_slc_v3r2_let" type="fme:ca_all_slc_v3r2_letType" substitutionGroup="gml:_Feature"/>
+<complexType name="ca_all_slc_v3r2_letType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="integer"/>
+<element name="LF_ID" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="9"/>
+</restriction>
+</simpleType>
+</element>
+<element name="POLY_ID" minOccurs="0" type="integer"/>
+<element name="LF_TYPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_SLOPE" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="LF_EXTENT" minOccurs="0" type="short"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>
